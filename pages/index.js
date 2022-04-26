@@ -1,14 +1,18 @@
-import useAuth from "./../hooks/useAuth";
+import { Heading } from "@chakra-ui/react";
+//import useAuth from "src/hooks/useAuth";
+import Layout from "src/components/Layout";
 
 export default function Home() {
 
-  const { user, signin } = useAuth();
-  console.log('user', user)
+  //const { user, signin } = useAuth();
 
   return (
-    <div>
-      <h2>EasyClass</h2>
-      <button onClick={() => signin()}>Entrar com github</button>
-    </div>
+    //Layout component standart (Layout.js)
+    //Heading component from chakra-ui
+    <Layout>
+      <Heading as='h2' size='xl' isTruncated>
+        Criando talentos e tranformando sonhos em realidades 
+      </Heading>
+    </Layout>
   )
 }

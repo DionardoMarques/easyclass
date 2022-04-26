@@ -1,14 +1,14 @@
-//contexto de autenticação (props, functions para alterar a propriedade)
+//Auth context (props, functions to change a property)
 import { createContext, useState } from 'react';
 import Router from 'next/router';
 import firebase from '../lib/firebase';
 
 const AuthContext = createContext();
 
-//AuthProvider recebe toda a página
+//AuthProvider receives all the page
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
-    //Loading enquanto for acessado o provedor de autenticação
+    //Loading while for accessed authentication provider
     const [loading, setLoading] = useState(true);
 
     const signin = () => {
