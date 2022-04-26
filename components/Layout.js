@@ -10,7 +10,7 @@ function Layout({ children }) {
     return (
     <Box bgColor={bgColor} minH="100vh">
         <Topbar />
-        <Flex flexDirection="column" pt={20}>
+        <Flex flexDirection="column" pt={'62px'}>
             {children}
         </Flex>
     </Box>
